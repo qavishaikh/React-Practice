@@ -14,11 +14,9 @@ const Counter = () => {
   return (
     <div>
       <h1>Counter App</h1>
+      <p>Conut : {count}</p>
 
-      <button onClick={increment}> + </button>
-
-      <p>Conut : {count}</p>  
-      
+      <button onClick={increment}> + </button> 
       <button onClick={decrement}> - </button>
     </div>
   )
