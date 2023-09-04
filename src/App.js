@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './App.css';
+import Counter from './Counter';
 
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
      <h6>{data}</h6>
 
      <button onClick={updateData}>Click Me..</button>
+
+    <Counter />
+
     </div>
   );
 }
