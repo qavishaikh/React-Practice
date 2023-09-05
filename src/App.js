@@ -1,11 +1,11 @@
-import React from 'react';
-import Form from './Form';
+import React  from 'react';
 import './App.css'
+import ColorPicker from './Colour';
 
 const App = () => {
   return (
     <div className='App'>
-      <Form />
+      <ColorPicker />
     </div>
   )
 }
