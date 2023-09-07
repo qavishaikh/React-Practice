@@ -3,6 +3,7 @@
 }
 
 button{
-  background-color: yellow;
+  background-color: black;
+  color: white;
   cursor: pointer; 
 }
