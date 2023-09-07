@@ -1,11 +1,12 @@
 import React  from 'react';
 import './App.css'
-import FormHandling from './Form';
+import Condition from './Condition';
 
 const App = () => {
   return (
     <div className='App'>
-      <FormHandling />
+      <h1>Condiotional Statements</h1>
+      <Condition />
     </div>
   )
 }
