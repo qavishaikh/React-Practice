@@ -1,12 +1,12 @@
 import React  from 'react';
 import './App.css'
-import FormValidate from './FormValidate';
+import AdmissionForm from './AdmissionForm';
 
 const App = () => {
   return (
     <div className='App'>
       <h1>Form Validate</h1>
-      <FormValidate />
+      <AdmissionForm />
     </div>
   )
 }
