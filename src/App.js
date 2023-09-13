@@ -1,25 +1,39 @@
-import React, { useState }  from 'react';
+// InventoryApp.js
+import React, { useState } from 'react';
+import InventoryList from './InvertryList';
+import AddItemForm from './AddForm';
 import './App.css'
-import UserProps from './Props';
 
-const App = () => {
+function InventoryApp() {
+  const [inventory, setInventory] = useState([]);
 
-  const handleButtonClick = () => {
-    console.log("Button Clicked");
+  const addNewItem = (item) => {
+    setInventory([...inventory, item]);
   };
 
-  const [count, setCount] = useState(0);
-  const incrementCount = () => {
-    setCount(count + 1);
-  }
+  const deleteItem = (index) => {
+    const updatedInventory = [...inventory];
+    updatedInventory.splice(index, 1);
+    setInventory(updatedInventory);
+  };
+
+  const updateItem = (index, newItem) => {
+    const updatedInventory = [...inventory];
+    updatedInventory[index] = newItem;
+    setInventory(updatedInventory);
+  };
+
   return (
     <div className='App'>
-      <h1>Props</h1>
-      <UserProps handleClick={handleButtonClick}
-      conut={count}
-      increment={incrementCount} />
+      <h1>Inventory Management System</h1>
+      <AddItemForm addNewItem={addNewItem} />
+      <InventoryList
+        inventory={inventory}
+        deleteItem={deleteItem}
+        updateItem={updateItem}
+      />
     </div>
-  )
+  );
 }
 
-export default App
+export default InventoryApp;

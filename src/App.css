@@ -7,3 +7,6 @@ button{
   color: white;
   cursor: pointer; 
 }
+li{
+  list-style: none;
+}
